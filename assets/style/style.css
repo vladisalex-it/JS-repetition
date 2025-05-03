@@ -1,0 +1,419 @@
+:root {
+  --black: #311f09;
+  --orange: #FF8A00;
+  ;
+}
+
+body, html {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1112px;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    background-color: #f0f0f0;
+}
+.counterApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.counter {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 0px;
+    width: 470px;
+    font-size: 24px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: .2s linear;
+}
+
+.button:hover {
+    background-color: rgb(4, 4, 142);
+}
+
+.button-blue {
+    background-color: blue;
+    color: white;
+}
+.button-red {
+    background-color: red;
+    color: white;
+}
+.button-red:hover {
+    background-color: rgb(209, 6, 6);
+}
+
+/* blogApp */
+
+.blogApp {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 750px;
+    margin: 80px auto 20px;
+    height: 50vh;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 10px;
+}
+
+.input-block__title,
+.post-feed__title {
+    font-size: 24px;
+}
+
+.post__title {
+    padding: 5px 20px;
+    font-size: inherit;
+}
+
+.post__text {
+    height: 150px;
+    font-size: 18px;
+    padding: 7px 10px;
+}
+
+.add-post__btn {
+    padding: 7px 126px;
+    font-size: 20px;
+}
+
+.post-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 500px;
+    overflow: hidden; /* Скрываем переполняющий текст */
+    text-overflow: ellipsis; /* Добавляем многоточие, если текст переполняет блок */
+    white-space: normal; /* Позволяем переносы строк */
+    word-wrap: break-word;
+}
+
+.post-list {
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.post-list::-webkit-scrollbar {
+    width: 8px; /* Ширина полосы прокрутки для Chrome, Safari и Edge */
+}
+
+.post-list {
+    list-style-type: none; /* Убираем маркеры у списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем поля */
+}
+
+.post__item {
+    margin-bottom: 12px;
+}
+
+.li-post__title {
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+.post__out {
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.delete-post {
+    float: right;
+}
+
+.errorMsg_hidden {
+    display: none;
+}
+
+.post__timestamp {
+    color: rgb(0, 99, 228);
+}
+
+
+/* expensesApp */
+.expensesTitle {
+    width: 100%;
+    text-transform: uppercase;
+}
+.expensesApp {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 120px;
+}
+
+.expenses_container {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 17px;
+   
+}
+
+.expenses__input {
+    width: 300px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #373535;
+    padding: 8px 12px; /* Отступы внутри поля ввода */
+}
+
+.input__junior {
+    width: 100%;
+    border: 0px solid #ccc; /* Граница */
+    border-radius: 4px; /* Скругленные углы */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.input__junior:focus {
+    outline: none;
+}
+
+.expenses__button {
+    width: 260px;
+    height: 38px;
+    border: none;
+    background-color: #4438ed;
+    color: white;
+}
+
+.rub::after {
+    content: " руб."
+}
+
+.stats {
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.stats__limit {
+    margin-bottom: 10px;
+}
+
+.stats__total {
+    margin-bottom: 21px;
+}
+
+.expenses__history {
+    width: 314px;
+    padding-left: 6px;
+
+}
+
+.expenses__history span {
+    margin-bottom: 10px;
+}
+
+.history__list {
+    padding-top: 10px;
+    list-style: decimal;
+    list-style-position: inside; /* Порядковые номера будут внутри */
+    padding-left: 0; /* Уберите стандартный отступ слева */
+    margin: 0; /* Удалите стандартные отступы */
+}
+
+.history__item {
+    margin-bottom: 3px;
+}
+
+.status__green {
+    color: green;
+}
+
+.status_red {
+    color: red;
+}
+
+
+
+
+
+
+.category-selector {
+    width: 100%;
+    font-size: 16px;
+    border-radius: 2px;
+    transition: border 0.3s;
+    background-size: 12px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #373535;
+    cursor: pointer;
+
+    padding: 10px;
+    padding-right: 10px;
+    background-image: url('../images/arrow.png'); /* Убедитесь, что путь правильный */
+    background-repeat: no-repeat;
+    background-position: right 14px center; /* Позиция стрелочки */
+    appearance: none; /* Убираем стандартный стиль */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer; /* Курсор указателя */
+}
+
+.category-selector:focus {
+    border-color: #007bff;
+    cursor: pointer;
+}
+
+.expenses-reset-btn {
+    background-color: red;
+    color: white;
+    width: 270px;
+    height: 38px;
+    border: none;
+}
+
+.limit-change-btn {
+    height: 25px;
+    padding: 0;
+    border: none;
+}
+
+.limit-change-btn img {
+    height: 100%;
+    width: 100%;
+}
+
+.validation-note {
+    color: red;
+    font-size: 14px;
+}
+
+.validation_hidden {
+    display: none; 
+}
+
+
+
+
+.popup-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+    margin-right: 15px;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 360px;
+    position: relative; /* Добавлено для позиционирования крестика */
+}
+
+.modal-open {
+    margin-right: 15px; 
+    overflow: hidden; /* Блокируем прокрутку страницы */
+}
+
+.popup__flex {
+    display: flex;
+    gap: 10px;
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+}
+
+.popup__input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup__btn {
+    height: 37px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .1s linear;
+    background-color: #1844d2;
+}
+
+.popup__btn:hover {
+    background-color: #062ba3;
+}
+
+#setLimitButton {
+    color: white;
+}
+
+.popup__close-button {
+    position: absolute; /* Позиционирование в правом верхнем углу */
+    top: 3px;
+    right: 10px;
+    font-size: 30px;
+    color: #130507;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #8f0c19;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+

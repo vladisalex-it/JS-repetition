@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "assets/style/reset.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Rereat</title>
+    
+</head>
+<body>
+    <div class="expensesApp">
+        <div class="expenses_container">
+            <h2 class="expensesTitle">учет расходов</h2>
+            <div class="expenses__input">
+                <div class="input-container rub">
+                    <input id="expensesInput" type="number" class="input__junior" placeholder="Введите трату...">
+                </div>
+            <select id="expensesCategory" class="category-selector">
+                <option value="" selected>Выберите категорию</option>
+                <option value="Самокат">Самокат</option>
+                <option value="Аптека">Аптека</option>
+                <option value="Магазины">Магазины</option>
+                <option value="Кафе и рестораны">Кафе и рестораны</option>
+            </select>
+            <div id="validationNote" class="validation-note validation_hidden "></div>
+            </div>
+            <button id="expensesButton" class="expenses__button">Добавить</button>
+            <div class="expenses__display">
+                <div class="stats">
+                    <div class="stats__limit">
+                        <span class="label">Лимит:</span>
+                        <span id="limitValue" class="rub">1000</span>
+                        <button id="limitChangeBtn" class="limit-change-btn">
+                            <img src="assets/images/image 1.png" alt="">
+                        </button>
+                    </div>
+                    <div class="stats__total">
+                        <span class="label">Всего:</span>
+                        <span id="totalValue" class="rub">0</span>
+                    </div>
+                    <div class="stats__status">
+                        <span class="label">Статус:</span>
+                        <span id="statusValue">всё хорошо</span>
+                    </div>
+                </div>
+                <button id="expensesResetBtn" class="expenses-reset-btn">Сбросить раходы</button>
+            </div>
+            
+       
+    
+            <div class="expenses__history">
+                <span class="label">История:</span>
+                <ol id="hisoryList" class="history__list">
+                    История пуста...
+                </ol>
+            </div>
+    
+            <div id="popup" class="popup-overlay">
+                <div id="popupContent" class="popup">
+                    <span id="popupCloseButton" class="popup__close-button">&times;</span>
+                    <h2>Задайте новый лимит</h2>
+                    <div class="popup__flex">
+                        <input id="popupInput" class="popup__input" type="number" placeholder="Введите лимит" />
+                        <button class="popup__btn" id="setLimitButton">Задать новый лимит</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blogApp">
+        <div class="input-block">
+            <h1 class="input-block__title">Новый пост</h1>
+            <input id="inputTitle" type="text" class="post__title" placeholder="Заголовок">
+            <textarea id="inputText" type="text" class="post__text" placeholder="Текст поста"></textarea>
+            <button id="addPostBtn" class="add-post__btn">Опубликовать</button>
+            <div id="errorMsg" class="errorMsg_hidden" style="color:red; font-size: 16px;"></div>
+        </div>
+        <div class="post-feed">
+            <h1 class="post-feed__title">Лента</h1>
+            <ul id="postList" class="post-list">
+                <p class="post__out">Лента пуста...</p>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="counterApp">
+        <div data-find="counterValue" class="counter" id="counter">0</div>
+        <button id="firstBtn" data-pools="1" class="button button-blue">+1 бассейн</button>
+        <button id="secondBtn" data-pools="2" class="button button-blue">+2 бассейна</button>
+        <button id="resetBtn" class="button button-red">Сброс</button>
+    </div>
+
+
+
+
+
+
+
+
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
